@@ -33,5 +33,18 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  }
+  },
+  "description": "A simple (but challenging) memory game! Players can choose their difficulty level, then score points by tapping each icon only ONCE.",
+  "main": "index.js",
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/realfakedoors/memory_shuffle.git"
+  },
+  "author": "Andy Holt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/realfakedoors/memory_shuffle/issues"
+  },
+  "homepage": "https://github.com/realfakedoors/memory_shuffle#readme"
 }
