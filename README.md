@@ -5,6 +5,6 @@ A simple (but challenging) memory game! Players can choose their difficulty leve
 Part of The Odin Project's React Unit:  
 https://www.theodinproject.com/lessons/memory-card  
 
-Meant to demonstrate an understanding of useState and useEffect Hooks.  
+Demonstrates an understanding of useState and useEffect hooks.  
 
 Icons made by https://www.flaticon.com/authors/freepik  

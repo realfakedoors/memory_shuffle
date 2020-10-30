@@ -34,17 +34,10 @@
       "last 1 safari version"
     ]
   },
-  "description": "A simple (but challenging) memory game! Players can choose their difficulty level, then score points by tapping each icon only ONCE.",
-  "main": "index.js",
-  "devDependencies": {},
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/realfakedoors/memory_shuffle.git"
-  },
-  "author": "Andy Holt",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/realfakedoors/memory_shuffle/issues"
-  },
-  "homepage": "https://github.com/realfakedoors/memory_shuffle#readme"
+  "devDependencies": {
+    "lodash.isequal": "^4.5.0",
+    "lodash.shuffle": "^4.2.0",
+    "lodash.uniq": "^4.5.0",
+    "webpack-cli": "^4.1.0"
+  }
 }

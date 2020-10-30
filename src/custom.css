@@ -3,3 +3,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+.square {
+  border: 5px solid darkblue;
+}
+
+.square > img {
+  height: 200px;
+  width: 200px;
+}
+
+.board {
+  overflow: none;
+  
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+  border: 5px solid darkred;
+}

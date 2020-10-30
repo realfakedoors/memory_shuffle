@@ -1,11 +1,19 @@
 import React from "react";
 
-const Square = (props) => {
+const Square = (props) => {  
+  function iconLocator(){
+    return "./icons/icon-" + props.icon + ".svg";
+  };
+  
+  function handleClick(){
+    props.handleClickedSquare(props.icon);
+  }
+
   return (
-    <div className="Square">
-      <img src={props.icon} alt="" />
+    <div className="square">
+      <img src={iconLocator()} alt="" onClick={handleClick} />
     </div>
   );
-}
+};
 
 export default Square;
