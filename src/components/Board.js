@@ -8,9 +8,15 @@ const Board = (props) => {
       <Square icon={square} handleClickedSquare={props.handleClickedSquare} />
     );
   }
-
+  
+  // Display a square grid regardless of difficulty.
+  const gridEdge = {
+    gridTemplateColumns: 'repeat(' + props.difficulty + ', auto)',
+    gridTemplateRows: 'repeat(' + props.difficulty + ', auto)',
+  };
+  
   return (
-    <div className="board">
+    <div className="board" style={gridEdge}>
       {props.squares.map(displaySquares)}
     </div>
   );

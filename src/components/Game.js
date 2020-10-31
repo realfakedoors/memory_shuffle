@@ -20,7 +20,7 @@ const Game = () => {
 
   function generateBoard(size) {
     setDifficulty(size);
-    setBoard(shuffle([...Array(50).keys()]).slice(0, size));
+    setBoard(shuffle([...Array(50).keys()]).slice(0, size * size));
   }
 
   function resetBoard() {
@@ -46,72 +46,57 @@ const Game = () => {
   if (difficulty === 0) {
     display = (
       <div className="new-game">
-        <p>Don't tap the same card twice!</p>
-        <p>select difficulty:</p>
-        <button
-          type="submit"
-          onClick={() => {
-            generateBoard(9);
-          }}
-        >
-          Easy
-        </button>
-        <button
-          type="submit"
-          onClick={() => {
-            generateBoard(16);
-          }}
-        >
-          Hard
-        </button>
-        <button
-          type="submit"
-          onClick={() => {
-            generateBoard(25);
-          }}
-        >
-          Insane
-        </button>
+        <p className="instructions">
+          <p className="how-to-play">How to play:</p>
+          Tap each icon only once!
+        </p>
+        <div className="difficulty-select" onClick={() => {generateBoard(3);}}>Normal</div>
+        <div className="difficulty-select" onClick={() => {generateBoard(4);}}>Hard</div>
+        <div className="difficulty-select" onClick={() => {generateBoard(5);}}>Brutal</div>
+        <div className="difficulty-select" onClick={() => {generateBoard(6);}}>Insane</div>
+        <div className="difficulty-select" onClick={() => {generateBoard(7);}}>FML</div>
       </div>
     );
   } else if (checkForDuplicates()) {
     display = (
       <div className="defeat-screen">
-        <p>Aww, you lost!</p>
-        <button
-          type="submit"
-          onClick={() => {
-            resetBoard();
-          }}
-        >
-          Try Again?
+        <p>Whoops, you already hit that square!<br />Better luck next time...</p>
+        <button onClick={() => {resetBoard();}}>
+          Give it another go?
         </button>
       </div>
     );
-  } else if ((!checkForDuplicates()) && clicked.length === difficulty) {
+  } else if (
+    !checkForDuplicates() &&
+    clicked.length === difficulty * difficulty
+  ) {
     display = (
       <div className="victory-screen">
-        <p>You won! Hell yeah!</p>
+        <p>You won! Hell yeah!<br />You must have a giant brain to be able to store all that memory!</p>
         <button
           type="submit"
           onClick={() => {
             resetBoard();
           }}
         >
-          Try Again?
+          Once Again?
         </button>
       </div>
     );
   } else {
     display = (
-      <Board squares={board} handleClickedSquare={handleClickedSquare} />
+      <Board
+        squares={board}
+        handleClickedSquare={handleClickedSquare}
+        difficulty={difficulty}
+      />
     );
   }
 
   return (
     <div className="game">
       <div className="score-display">
-        <p>Current Score: {clicked.length}</p>
+        <p>Current Streak: {clicked.length}</p>
         <p>High Score: {highScore}</p>
       </div>
       {display}

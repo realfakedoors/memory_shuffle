@@ -1,24 +1,184 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Creepster&family=Press+Start+2P&display=swap");
+
 body {
   margin: 0;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-.square {
-  border: 5px solid darkblue;
+.game {
+  width: 80vh;
+  height: 100vh;
+
+  margin: auto;
+
+  text-align: center;
+  font-family: "Bebas Neue", cursive;
+  color: white;
 }
 
-.square > img {
-  height: 200px;
-  width: 200px;
+.score-display {
+  height: 33px;
+  padding: 4px 16px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  font-family: "Press Start 2P", cursive;
+  font-size: 18px;
+}
+
+.new-game {
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.instructions {
+  height: 3%;
+  font-size: 25px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.defeat-screen,
+.victory-screen {
+  height: 25vh;
+  
+  padding: 35px;
+  
+  font-size: 53px;
+}
+
+.difficulty-select {
+  height: 17vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 102px;
 }
 
 .board {
+  width: 80vh;
+
+  display: grid;
+  grid-gap: 5px;
+
   overflow: none;
+}
+
+.square {
+  position: relative;
+  box-sizing: border-box;
+
+  border: 4px solid #777777;
+}
+
+.square::before {
+  content: "";
+  display: block;
+  padding-top: 100%;
+}
+
+.square > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+}
+
+button {
+  border: none;
+  padding: 17px 22px;
+  margin: 28px;
   
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
+  font-family: inherit;
+  font-size: 35px;
+  color: white;
+}
+
+/* Colors */
+
+body {
+  background-color: black;
+}
+
+.game {
+  background-color: #bfbfbf;
+}
+
+.score-display {
+  color: #c65d5d;
+}
+
+.how-to-play {
+  color: #d9d9d9;
+  margin-right: 12px;
+}
+
+.instructions {
+  background-color: #737373;
+}
+
+button {
+  background-color: #5ec783;
+}
+
+.difficulty-select:nth-child(2) {
+  background-color: #5ec783;
+}
+
+.difficulty-select:nth-child(3) {
+  background-color: #acc65d;
+}
+
+.difficulty-select:nth-child(4) {
+  background-color: #c6c65d;
+}
+
+.difficulty-select:nth-child(5) {
+  background-color: #c6915d;
+}
+
+.difficulty-select:nth-child(6) {
+  background-color: #c65d5d;
+  font-family: "Creepster", cursive;
+}
+
+.square {
+  background-color: #f2f2f2;
+}
+
+/* Responsive Mobile Layout */
+
+@media screen and (max-device-width: 768px) {
+  .game {
+    width: 100vw;
+    height: 100vh;
+  }
   
-  border: 5px solid darkred;
+  .score-display {
+    font-size: 15px;
+    text-align: left;
+    padding: 0;
+  }
+  
+  .board {
+    width: 100vw;
+    height: 100vw;
+    
+    margin-top: 30px;
+  }
+  
+  button {
+    padding: 10px;
+  }
 }
