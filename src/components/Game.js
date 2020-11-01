@@ -54,7 +54,7 @@ const Game = () => {
         <div className="difficulty-select" onClick={() => {generateBoard(4);}}>Hard</div>
         <div className="difficulty-select" onClick={() => {generateBoard(5);}}>Brutal</div>
         <div className="difficulty-select" onClick={() => {generateBoard(6);}}>Insane</div>
-        <div className="difficulty-select" onClick={() => {generateBoard(7);}}>FML</div>
+        <div className="difficulty-select" onClick={() => {generateBoard(7);}}>Bruh...</div>
       </div>
     );
   } else if (checkForDuplicates()) {

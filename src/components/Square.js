@@ -2,7 +2,7 @@ import React from "react";
 
 const Square = (props) => {  
   function iconLocator(){
-    return "./icons/icon-" + props.icon + ".svg";
+    return process.env.PUBLIC_URL + "/icons/icon-" + props.icon + ".svg";
   };
   
   function handleClick(){
