@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/memory_shuffle/static/css/main.b6c646f5.chunk.css",
+    "main.css": "/memory_shuffle/static/css/main.cedcdc11.chunk.css",
     "main.js": "/memory_shuffle/static/js/main.0ed8d86b.chunk.js",
     "main.js.map": "/memory_shuffle/static/js/main.0ed8d86b.chunk.js.map",
     "runtime-main.js": "/memory_shuffle/static/js/runtime-main.2121ba75.js",
@@ -8,14 +8,14 @@
     "static/js/2.59e00615.chunk.js": "/memory_shuffle/static/js/2.59e00615.chunk.js",
     "static/js/2.59e00615.chunk.js.map": "/memory_shuffle/static/js/2.59e00615.chunk.js.map",
     "index.html": "/memory_shuffle/index.html",
-    "static/css/main.b6c646f5.chunk.css.map": "/memory_shuffle/static/css/main.b6c646f5.chunk.css.map",
+    "static/css/main.cedcdc11.chunk.css.map": "/memory_shuffle/static/css/main.cedcdc11.chunk.css.map",
     "static/js/2.59e00615.chunk.js.LICENSE.txt": "/memory_shuffle/static/js/2.59e00615.chunk.js.LICENSE.txt",
     "static/media/custom.css": "/memory_shuffle/static/media/background.dd372fdf.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.2121ba75.js",
     "static/js/2.59e00615.chunk.js",
-    "static/css/main.b6c646f5.chunk.css",
+    "static/css/main.cedcdc11.chunk.css",
     "static/js/main.0ed8d86b.chunk.js"
   ]
 }
