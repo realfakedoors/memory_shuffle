@@ -7,4 +7,6 @@ https://www.theodinproject.com/lessons/memory-card
 
 Demonstrates an understanding of useState and useEffect hooks.  
 
-Icons made by https://www.flaticon.com/authors/freepik  
+Icons AND Background made by https://www.flaticon.com/authors/freepik  
+  
+## hosted LIVE at https://realfakedoors.github.io/memory_shuffle/  
