@@ -185,6 +185,10 @@ button {
     text-align: left;
     padding: 0;
   }
+  
+  .difficulty-select {
+    height: 12%;
+  }
 
   .board {
     width: 100vw;
